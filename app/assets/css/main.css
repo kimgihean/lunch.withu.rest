@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-pink: #ff85a2;
+  --secondary-pink: #fbb1bd;
+  --bg-pink: #ffe5ec;
+  --accent-pink: #ff0a54;
+}
+
+body {
+  background-color: var(--bg-pink);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  color: #4a4a4a;
+}
+
+.cute-card {
+  @apply bg-white rounded-3xl p-6 shadow-lg border-4 border-white;
+  transition: transform 0.3s ease;
+}
+
+.cute-card:hover {
+  transform: translateY(-5px);
+}
+
+.cute-button {
+  @apply bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all active:scale-95;
+}
+
+.cute-input {
+  @apply border-2 border-pink-200 rounded-2xl px-4 py-2 focus:outline-none focus:border-pink-400 transition-colors;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-pink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-pink);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-pink);
+}
